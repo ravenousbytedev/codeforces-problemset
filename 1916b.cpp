@@ -16,9 +16,9 @@ int main() {
         } else if (std::gcd(a, b) == 1 || b % a != 0) {
             std::println("{}", std::lcm(a, b));
         } else {
-            for (unsigned long long extra_factor = 2; true; ++extra_factor) {
-                if (b % extra_factor == 0) {
-                    std::println("{}", extra_factor * b);
+            for (unsigned long long k = 2; true; ++k) {
+                if (b % k == 0) {
+                    std::println("{}", k * b);
                     break;
                 }
             }
